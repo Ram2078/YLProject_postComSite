@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Добавьте новый пост!</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class="flashes">
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  <form method="post">
+    <label for="title">Заголовок поста</label><br>
+    <input type="text" id="title" name="title"><br>
+    <label for="content">Текст поста</label><br>
+    <textarea id="content" name="content"></textarea><br>
+    <label for="title">Ссылка на картинку (.jpg)</label><br>
+    <input type="text" id="pic_url" name="pic_url"><br>
+    <input type="submit" value="Создать">
+  </form>
+{% endblock %}

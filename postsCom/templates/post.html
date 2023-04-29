@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    <a href="{{ url_for('index') }}">На главную</a>
+    <p><img src="{{ post.pic_path }}" alt="Ошибка в ссылке на картинку. Пример ссылки: https://download.samplelib.com/jpeg/sample-clouds-400x300.jpg"></p>
+    <p></p>
+    <h4>Комментарий(шуточный):</h4>
+    <p>{{ post.random_comment }}</p>
+</body>
+</html>
